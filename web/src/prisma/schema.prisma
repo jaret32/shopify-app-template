@@ -1,0 +1,43 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model ShopifySession {
+  id               String            @id @map("_id")
+  shop             String
+  state            String
+  isOnline         Boolean
+  scope            String?
+  expires          DateTime?
+  accessToken      String?
+  onlineAccessInfo OnlineAccessInfo?
+
+  @@map("shopifySessions")
+}
+
+type OnlineAccessInfo {
+  expires_in            Int
+  associated_user_scope String
+  associated_user       AssociatedUser
+  session               String?
+  account_number        Int?
+}
+
+type AssociatedUser {
+  id             Int
+  first_name     String
+  last_name      String
+  email          String
+  email_verified Boolean
+  account_owner  Boolean
+  locale         String
+  collaborator   Boolean
+}

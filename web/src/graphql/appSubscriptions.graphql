@@ -1,0 +1,8 @@
+query appSubscriptions {
+  currentAppInstallation {
+    activeSubscriptions {
+      name
+      test
+    }
+  }
+}

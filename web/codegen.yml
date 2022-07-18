@@ -1,0 +1,11 @@
+schema:
+  - https://${GRAPHQL_CODEGEN_SHOP}/admin/api/${GRAPHQL_CODEGEN_API_VERSION}/graphql.json:
+      headers:
+        X-Shopify-Access-Token: ${GRAPHQL_CODEGEN_ACCESS_TOKEN}
+documents: './src/graphql/*.graphql'
+generates:
+  ./src/graphql/sdk.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-graphql-request
