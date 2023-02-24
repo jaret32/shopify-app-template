@@ -1,3 +1,4 @@
 # This file stores configurations for your Shopify app.
 
+name = "Your Shopify app name"
 scopes = "write_products"

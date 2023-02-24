@@ -27,8 +27,6 @@ type OnlineAccessInfo {
   expires_in            Int
   associated_user_scope String
   associated_user       AssociatedUser
-  session               String?
-  account_number        Int?
 }
 
 type AssociatedUser {
