@@ -1,5 +1,3 @@
-import * as shopifySessionService from '../../services/shopifySessionService';
-
-export const appUninstalledHandler = async (_topic: string, shop: string) => {
-  await shopifySessionService.deleteShopSessions(shop);
+export const appUninstalledHandler = async (_topic: string, _shop: string) => {
+  // handle app uninstall
 };

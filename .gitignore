@@ -17,7 +17,7 @@ logs
 # ngrok tunnel file
 config/tunnel.pid
 
-# vite build output
+# build output
 dist/
 
 # extensions build output

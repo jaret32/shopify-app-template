@@ -1,0 +1,5 @@
+coverage
+dist
+frontend
+node_modules
+src/graphql/generated.ts

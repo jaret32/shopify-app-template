@@ -4,7 +4,7 @@ schema:
         X-Shopify-Access-Token: ${GRAPHQL_CODEGEN_ACCESS_TOKEN}
 documents: './src/graphql/*.graphql'
 generates:
-  ./src/graphql/sdk.ts:
+  ./src/graphql/generated.ts:
     plugins:
       - typescript
       - typescript-operations
