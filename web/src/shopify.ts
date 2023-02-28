@@ -8,7 +8,10 @@ const shopify = shopifyApp({
     apiVersion: ApiVersion.January23,
     isEmbeddedApp: true,
     logger: {
-      level: LogSeverity.Debug,
+      level:
+        process.env.NODE_ENV === 'production'
+          ? LogSeverity.Info
+          : LogSeverity.Debug,
     },
     restResources,
   },
